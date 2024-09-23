@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "45ab3131-c497-4819-b5c5-d5a4df4eff27",
+		"name": "GitHub - Exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GitHub - Exercise Tasks",
+			"item": [
+				{
+					"name": "https://api.github.com/repos/{{user}}/{{Repo}}/issues",
+					"id": "c8abef01-d18f-4637-bfe9-f8a6e1e4b95f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://api.github.com/repos/{{user}}/{{Repo}}/issues"
+					},
+					"response": []
+				},
+				{
+					"name": "https:/{{host}}/{{user}}/{{Repo}}/issues/3",
+					"id": "92d98986-eee1-477a-a837-b9118e481e79",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/3"
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/3/comments",
+					"id": "a0634288-8165-40f9-8aca-2b1842846d14",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/3/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/comments/",
+					"id": "8dbd63f9-d2af-40f7-b745-d924cbbf099c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/comments/136805128"
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{host}}/repos/{{user}}/{{Repo}}/issues",
+					"id": "e8af6958-d69b-46d2-84b9-3ec97c093340",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"My fourth issue from Postman with body and labels\",\r\n    \"body\": \"some body\",\r\n    \"labels\": [\r\n        \"feature\",\r\n        \"client\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://{{host}}/repos/{{user}}/SoftUni-exercise/issues"
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/8",
+					"id": "df75ff3b-b31b-4137-98c0-77491ea395d4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"EDITED\",\r\n    \"body\": \"some body\",\r\n    \"labels\": [\r\n        \"feature\",\r\n        \"client\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/8"
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/9/comments",
+					"id": "bc504c0c-9f62-4864-873f-6f5d73e0d810",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"body\": \"The issue is tested\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/9/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/comments/1656734800",
+					"id": "88283b2b-0106-4b6d-8ddb-00735efcaa50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"body\": \"The issue is tested and everything is OK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/comments/1656734800"
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/comments/1656734800",
+					"id": "759538d1-f42b-41f8-8b02-9aee149e25e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "https://{{host}}/repos/{{user}}/{{Repo}}/issues/comments/1656734800"
+					},
+					"response": []
+				}
+			],
+			"id": "933600fe-597b-4ae2-a1f4-470278b1f3f6"
+		}
+	]
+}
